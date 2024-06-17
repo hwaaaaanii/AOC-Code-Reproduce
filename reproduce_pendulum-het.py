@@ -734,7 +734,7 @@ if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     alias = f"env_{args.env_name}_rollout_{args.n_rollout}_keep_autofill_gamma_{args.gamma}_epoch_{args.n_epoch}_seed_{args.rand_seed}_dsize_{args.dsize}_quantile_{args.quantile}"
-    buffer = np.load(f'Dataset/pendulum_forward.npy', allow_pickle=True).item()
+    buffer = np.load(f'Dataset/TD3_Pendulum-v1_0_-1.0_forward.npy', allow_pickle=True).item()
     buffer_sa = np.concatenate((buffer['state'], buffer['action']), 1)
     buffer_r = buffer['reward']
     buffer_r_cumavg = np.zeros_like(buffer_r)
@@ -756,7 +756,7 @@ if __name__ == '__main__':
     buffer_sa = buffer_sa[:LEN]
     buffer_r = buffer_r[:LEN]
     buffer_r_cumavg = buffer_r_cumavg[:LEN]
-    buffer2 = np.load(f'Dataset/pendulum_inverse.npy', allow_pickle=True).item()
+    buffer2 = np.load(f'Dataset/TD3_Pendulum-v1_0_-1.0_forward.npy', allow_pickle=True).item()
     buffer_sa2 = np.concatenate((buffer2['state'], buffer2['action']), 1)
     buffer_r2 = buffer2['reward']
     buffer_r_cumavg2 = np.zeros_like(buffer_r2)

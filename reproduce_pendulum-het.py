@@ -756,7 +756,7 @@ if __name__ == '__main__':
     buffer_sa = buffer_sa[:LEN]
     buffer_r = buffer_r[:LEN]
     buffer_r_cumavg = buffer_r_cumavg[:LEN]
-    buffer2 = np.load(f'Dataset/TD3_Pendulum-v1_0_-1.0_forward.npy', allow_pickle=True).item()
+    buffer2 = np.load(f'Dataset/TD3_Pendulum-v1_0_-1.0_inverse.npy', allow_pickle=True).item()
     buffer_sa2 = np.concatenate((buffer2['state'], buffer2['action']), 1)
     buffer_r2 = buffer2['reward']
     buffer_r_cumavg2 = np.zeros_like(buffer_r2)

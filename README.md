@@ -1,6 +1,8 @@
-# [NeurIPS'2023] Accountability in Offline Reinforcement Learning: Explaining Decisions with a Corpus of Examples 
+# KAIST IE437 Final Project
 
 ## [Paper](https://arxiv.org/pdf/2310.07747.pdf) 
+
+This repository contains the implementation and reproduction of experiments from the paper **[NeurIPS'2023] "Accountability in Offline Reinforcement Learning: Explaining Decisions with a Corpus of Examples"** by Hao Sun et al.
 
 ## Key Insight:
 **_Test-time decisions made by an agent should have a decision basis in the training decision dataset. Using a latent space decomposition and similarity-based matching, decisions made by agents in offline reinforcement learning can be interpretable._**
